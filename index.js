@@ -4,6 +4,7 @@ var express = require("express");
 const cors = require("cors");
 const axios = require("axios");
 var bodyParser = require("body-parser");
+const fetch = require("node-fetch");
 require("dotenv").config();
 // basic setups
 const encodedParams = new URLSearchParams();
