@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 var ocrText;
 var sentimentResult;
 var spotifyResponse;
-var spotkey = "BQD3cPo8bOcuVHMbMKupYDDNmGI-dsAKbbdPfmNzQKFnQwKG91dZp13Lk90NV_UM7Raajx0uGTG-HntZlKp4VTF0WWZ0VRICnWcx-41jK91kiKrsdvs";
+var spotkey = "BQD3spyxlPcRIktwfcmM-MCteSmw7x7lc99q8DexS-W3zh5Aek9iEwwrrxyKh_eFMqRjbzqLtk-1OeLze8OozZ61jA6DkfcuVRLnyOHEey7mt4p8Lb8";
 // testing
 app.get("/o", (req, res) => {
   res.send("test");
