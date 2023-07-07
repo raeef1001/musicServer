@@ -15,9 +15,13 @@ app.use(bodyParser.json());
 var ocrText;
 var sentimentResult;
 var spotifyResponse;
+var spotkey = "BQD3cPo8bOcuVHMbMKupYDDNmGI-dsAKbbdPfmNzQKFnQwKG91dZp13Lk90NV_UM7Raajx0uGTG-HntZlKp4VTF0WWZ0VRICnWcx-41jK91kiKrsdvs";
 // testing
 app.get("/o", (req, res) => {
   res.send("test");
+});
+app.get("/spotkey", (req, res) => {
+  res.send(spotkey);
 });
 // sentiment
 function sent(ocrText) {
@@ -68,7 +72,7 @@ async function main(url, res) {
 // always running
 let intervalID;
 function repeatEverySecond() {
-  intervalID = setInterval(sendMessage, 1000);
+  intervalID = setInterval(sendMessage, 100000);
 }
 function sendMessage() {
   console.log("called");
@@ -93,6 +97,7 @@ async function spotify() {
     })
   );
   console.log(response.data.access_token)
+  spotkey = response.data.access_token
 }
 
 
